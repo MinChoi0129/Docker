@@ -11,13 +11,10 @@ client.set("number", 0)
 
 // Generating express app at 8080
 const app = express();
-app.get('/', (req, res) => {
-    res.send("안녕하세요.")
-})
 
 app.get('/', (req, res) => {
     client.get("number", (err, number) => {
-        res.send("현재 숫자 :" + number)
+        res.send("증가된 현재 숫자 :" + number)
         client.set("number", parseInt(number) + 1)
     })
 })
