@@ -1,5 +1,0 @@
-docker ps
-docker stop / docker kill
-docker run
-docker build
-...
