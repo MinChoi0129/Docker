@@ -1,5 +1,9 @@
 sudo: required
 language: generic
+
+services:
+  - docker
+
 before_install:
   - echo "start creatng an image with dockerfile"
   - docker build -t leeminjae0129/docker-react-app -f Dockerfile.dev .
